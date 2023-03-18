@@ -1,15 +1,57 @@
 [
     {
       "comment_title": "Music Near Me",
-      "comment_body": "A mobile app that will send you notifications whenever a concert is playing in your area."
+      "comment_body": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+      "user_id": 1,
+      "post_id":1
     },
     {
       "comment_title": "The Ultimate Tech Quiz",
-      "comment_body": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!"
+      "comment_body": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+      "user_id": 2,
+      "post_id":2
     },
     {
       "comment_title": "Roll 'Em Up",
-      "comment_body": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes."
+      "comment_body": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+      "user_id": 1,
+      "post_id":3
+    },
+    {
+      "comment_title": "Music Near Me",
+      "comment_body": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+      "user_id": 3,
+      "post_id":1
+    },
+    {
+      "comment_title": "The Ultimate Tech Quiz",
+      "comment_body": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+      "user_id": 3,
+      "post_id":2
+    },
+    {
+      "comment_title": "Roll 'Em Up",
+      "comment_body": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+      "user_id": 1,
+      "post_id":3
+    },
+    {
+      "comment_title": "Music Near Me",
+      "comment_body": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+      "user_id": 2,
+      "post_id":1
+    },
+    {
+      "comment_title": "The Ultimate Tech Quiz",
+      "comment_body": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+      "user_id": 2,
+      "post_id":3
+    },
+    {
+      "comment_title": "Roll 'Em Up",
+      "comment_body": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+      "user_id": 3,
+      "post_id":2
     }
   ]
   
