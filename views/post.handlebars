@@ -1,0 +1,15 @@
+<div class="text-center">
+  <h2>{{post_description}}</h2>
+  <p></p>
+  <p></p>
+  <p>Created by {{user.name}} on {{date_created}}</p>
+  <form class="new-comment-form">
+    <label for="post_comment">Leave a comment</label>
+    <input class="form-input comment-input" type="text">
+    
+      <button type="submit" class="btn btn-primary add-a-comment-btn">Add Comment</button>
+    </form>
+    {{#each comments as |comment|}}
+    {{> comment}}
+    {{/each}}
+</div>
