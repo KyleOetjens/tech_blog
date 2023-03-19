@@ -1,12 +1,14 @@
-const newFormHandler = async (event) => {
+const newCommentHandler = async (event) => {
 
-    const commentDescription = document.querySelector('.comment-input').value.trim();
+    const comment_body = document.querySelector('#comment-desc').value.trim();
   
-    if (commentDescription) {
+    if (comment_body) {
         console.log(`in post`);
+        console.log(comment_body);
+        
       const response = await fetch(`/api/comments`, {
         method: 'POST',
-        body: JSON.stringify({ commentDescription }),
+        body: JSON.stringify({ comment_body }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -38,9 +40,9 @@ const newFormHandler = async (event) => {
   
   document
     .querySelector('.new-comment-form')
-    .addEventListener('submit', newFormHandler);
+    .addEventListener('submit', newCommentHandler);
   
-  document
+  /*document
     .querySelector('.project-list')
     .addEventListener('click', delButtonHandler);
-  
+  */
