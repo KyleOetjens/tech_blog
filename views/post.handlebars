@@ -1,8 +1,9 @@
 <div class="text-center">
-  {{id}}
+  <a href="/post/{{id}}">{{post_name}}</a>
   <h2>{{post_description}}</h2>
   <p>Created by {{user.name}} on {{date_created}}</p>
   <form class="new-comment-form">
+    <input type="hidden" id="post-id" name="post-id" value="{{id}}" >
     <label for="post_comment">Leave a comment</label>
     <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
       <button type="submit" class="btn btn-primary add-a-comment-btn">Add Comment</button>
@@ -11,3 +12,4 @@
     {{> comment}}
     {{/each}}
 </div>
+<script src="/js/comment.js"></script>

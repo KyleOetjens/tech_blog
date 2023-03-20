@@ -32,6 +32,7 @@ router.get('/post/:id', async (req, res) => {
         },
         {
           model: Comment,
+          include: [User], order: [["date_created", "DESC"]]
         }
       ],
     });
