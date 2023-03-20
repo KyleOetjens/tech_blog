@@ -8,6 +8,9 @@
     <div class="card-body">
       
       <p>{{comment_body}}</p>
+      {{#if user_id = session.user_id }}
+      <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      {{/if}}
     </div>
 
 </section>

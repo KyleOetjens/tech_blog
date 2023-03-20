@@ -8,6 +8,9 @@
     <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
       <button type="submit" class="btn btn-primary add-a-comment-btn">Add Comment</button>
     </form>
+    {{#if user_id = session.user_id }}
+      <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+      {{/if}}
     {{#each comments as |comment|}}
     {{> comment}}
     {{/each}}
