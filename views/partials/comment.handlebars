@@ -6,11 +6,12 @@
     <!-- In the body of the card, the painting is rendered along with the artist name -->
 
     <div class="card-body">
-      
-      <p>{{comment_body}}</p>
-      {{#if user_id = session.user_id }}
-      <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      {{/if}}
+      <p>{{comment_body}}
+        {{#if owned_comment }}
+    <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+     <button class="btn btn-sm btn-success" data-id="{{id}}">EDIT</button>
+    {{/if}}
+      </p>
     </div>
 
 </section>

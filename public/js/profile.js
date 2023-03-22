@@ -26,7 +26,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/posts/${id}`, {
       method: 'DELETE',
     });
 
@@ -38,11 +38,31 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const editBtnHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+    const postName = document.querySelector('#post-name').value;
+    const postDescription = document.querySelector('#post-description').value;
+    const response = await fetch(`/api/posts/${id}`, {
+      method: 'PUT',
+
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to delete project');
+    }
+  }
+}
 document
   .querySelector('.new-project-form')
   .addEventListener('submit', newFormHandler);
 
-/*document
-  .querySelector('.project-list')
+document
+  .querySelector('.btn-danger')
   .addEventListener('click', delButtonHandler);
-*/
+
+  // document
+  // .querySelector('.btn-success')
+  // .addEventListener('click', editBtnHandler);

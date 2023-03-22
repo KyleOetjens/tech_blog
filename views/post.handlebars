@@ -2,17 +2,40 @@
   <a href="/post/{{id}}">{{post_name}}</a>
   <h2>{{post_description}}</h2>
   <p>Created by {{user.name}} on {{date_created}}</p>
+  <div class="edit-dish-container">
+  <h2>
+    Update Post
+  </h2>
+  <form class="edit-dish-form">
+    <label for="dish_name">
+      Post Title:
+    </label>
+    <br />
+    <textarea id="dish_name" name="dish_name" rows="2" cols="30">
+      {{post_name}}
+    </textarea>
+    <br />
+    <label for="description">
+      Post:
+    </label>
+    <br />
+    <textarea id="description" name="description" rows="5" cols="30">
+      {{post_description}}
+    </textarea>
+    <button type="submit" value="submit">
+      Update
+    </button>
+  </form>
+</div>
   <form class="new-comment-form">
     <input type="hidden" id="post-id" name="post-id" value="{{id}}" >
     <label for="post_comment">Leave a comment</label>
     <textarea class="form-input" id="comment-desc" name="comment-desc"></textarea>
       <button type="submit" class="btn btn-primary add-a-comment-btn">Add Comment</button>
     </form>
-    {{#if user_id = session.user_id }}
-      <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
-      {{/if}}
     {{#each comments as |comment|}}
     {{> comment}}
     {{/each}}
 </div>
 <script src="/js/comment.js"></script>
+<script src="/public/js/edit.js"></script>

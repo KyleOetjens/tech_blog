@@ -3,9 +3,20 @@ module.exports = {
     // Format date as MM/DD/YYYY
     return date.toLocaleDateString();
   },
-  format_amount: (amount) => {
+  is_comment: (a,b) => {
     // format large numbers with commas
-    return parseInt(amount).toLocaleString();
+    console.log(a);
+    console.log(b);
+    return a===b
+  },
+
+  is_post: (a,b) => {
+    if (a=b){
+      return true
+    }
+    else {
+      return false
+    }
   },
   get_emoji: () => {
     const randomNum = Math.random();
