@@ -1,4 +1,4 @@
- function editPostHandler(event) {
+ async function editPostHandler(event) {
     event.preventDefault();
     const post_name = document.querySelector('#dish_name').value;
     const post_description = document.querySelector('#description').value;
@@ -36,5 +36,5 @@
     }
   }
   
-  document.querySelector('.edit-dish-form').addEventListener('submit', editFormHandler);
+  document.querySelector('.edit-dish-form').addEventListener('submit', editPostHandler);
   
