@@ -1,5 +1,6 @@
  async function editPostHandler(event) {
     event.preventDefault();
+    console.log(event);
     const post_name = document.querySelector('#dish_name').value;
     const post_description = document.querySelector('#description').value;
     
@@ -13,10 +14,11 @@
       window.location.toString().split('/').length - 1
     ];
   
+    console.log(id.split('?'));
     // What part of our application will handle this 'put' request?
     // The Controller will handle this 'put' request.
   
-    const response = await fetch(`/api/post/${id}`, {
+    const response = await fetch(`/api/posts/${id.split('?')[0]}`, {
       method: 'PUT',
       body: JSON.stringify({
         post_name,
