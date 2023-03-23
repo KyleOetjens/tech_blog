@@ -1,17 +1,12 @@
-<section class="card">
-  <!-- <a href="/painting/{{id}}"> The contents of the painting card links to the painting page using the painting ID -->
-  
-    <!-- The card contains the painting name as the card header -->
-    
-    <!-- In the body of the card, the painting is rendered along with the artist name -->
 
+<section class="card">
     <div class="card-body">
-      <p>{{comment_body}}
+      <p>{{comment_body}}</p>
         {{#if owned_comment }}
     <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
-     <button class="btn btn-sm btn-success" data-id="{{id}}">EDIT</button>
+     <button class="btn btn-sm btn-success"><a href="/editpost/{{id}}">EDIT</button>
     {{/if}}
-      </p>
+      
     </div>
 
 </section>
