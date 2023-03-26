@@ -1,7 +1,8 @@
-
+{{#each comments as |comment|}}
 <section class="card">
     <div class="card-body">
       <p>{{comment_body}}</p>
+      <p>Created by, {{user.name}}, On {{date_created}}</p>
         {{#if owned_comment }}
     <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
      <button class="btn btn-sm btn-success"><a href="/editpost/{{id}}">EDIT</button>
@@ -10,3 +11,4 @@
     </div>
 
 </section>
+{{/each}}

@@ -20,8 +20,8 @@
         <button><a href="/">Home</a></button>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <button class="no-button" id="logout">logout</button>
         <button><a href="/profile">Dashoard</a></button>
+         <button  id="logout">logout</button>
         {{else}}
         <button><a href="/login">login</a></button>
         {{/if}}

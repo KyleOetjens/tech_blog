@@ -34,8 +34,22 @@
       <button type="submit" class="btn btn-primary add-a-comment-btn">Add Comment</button>
     </form>
     {{#each comments as |comment|}}
+<section class="card">
+    <div class="card-body">
+      <p>{{comment_body}}</p>
+      <p>Created by, {{user.name}}, On {{date_created}}</p>
+        {{#if owned_comment }}
+    <button class="btn btn-sm btn-danger" data-id="{{id}}">DELETE</button>
+     <button class="btn btn-sm btn-success"><a href="/editpost/{{id}}">EDIT</button>
+    {{/if}}
+      
+    </div>
+
+</section>
+{{/each}}
+    {{!-- {{#each comments as |comment|}}
     {{> comment}}
-    {{/each}}
+    {{/each}} --}}
 </div>
 <script src="/js/comment.js"></script>
 <script src="/js/edit.js"></script>

@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const session = require('express-session');
 const { Post, Comment, User } = require('../models');
 const withAuth = require('../utils/auth')
 
@@ -41,6 +42,9 @@ router.get('/post/:id',withAuth, async (req, res) => {
     const project = projectData.get({ plain: true });
 console.log(project);
 project.comments.forEach(element => {
+  console.log(element);
+  console.log(element.user_id);
+  console.log(project.user_id);
   if (element.user_id === project.user_id){
     element.owned_comment = true
   }
