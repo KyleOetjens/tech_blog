@@ -24,6 +24,7 @@ const newCommentHandler = async (event) => {
   
   const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
+      console.log('hitting delete 349587 button handler')
       const id = event.target.getAttribute('data-id');
   
       const response = await fetch(`/api/comments/${id}`, {
@@ -41,7 +42,14 @@ const newCommentHandler = async (event) => {
   document
     .querySelector('.new-comment-form')
     .addEventListener('submit', newCommentHandler);
-   document
-.querySelectorAll('.comment-delete-btn')
-.addEventListener(`click`, delButtonHandler);
-  
+// document
+// .querySelector('.comment-delete-btn')
+// .addEventListener(`click`, delButtonHandler);
+
+const elements = document.querySelectorAll('.comment-delete-btn');
+elements.forEach(element => {
+  element.addEventListener('click', delButtonHandler)
+});
+
+  console.log(document
+    .querySelector('.comment-delete-btn'))

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     console.log(req.body);
   console.log(`in post route`);
@@ -26,7 +26,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         user_id: req.session.user_id,
       },
     });
-
+console.log(postData);
     if (!postData) {
       res.status(404).json({ message: 'No project found with this id!' });
       return;

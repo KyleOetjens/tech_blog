@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   console.log(req.body);
   console.log(`in comment route`);
     try {
@@ -19,6 +19,7 @@ router.post('/', withAuth, async (req, res) => {
   });
   
   router.delete('/:id', async (req, res) => {
+    console.log(req.params.id)
     try {
       const postData = await Comment.destroy({
         where: {
@@ -32,8 +33,9 @@ router.post('/', withAuth, async (req, res) => {
         return;
       }
   
-      res.status(200).json(postData`comment deleted`);
+      res.status(200).json(`comment deleted`);
     } catch (err) {
+      console.log(err);
       res.status(500).json(err);
     }
   });
