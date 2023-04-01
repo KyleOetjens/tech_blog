@@ -2,7 +2,7 @@
 
 ## Description  
 
-I created a small blog posting site that follows the MVC archetecture
+I created a tech blog to build my skills with handlebars and MVC archetecture
 
 ## Table of Contents
 
@@ -17,29 +17,29 @@ I created a small blog posting site that follows the MVC archetecture
 
 ## Installation
 
-This should work on heroku as is, if you are running locally, you will need to go in the CL and source the DB, then run npm i , then node server.js
+Visit the blog on this link https://techblogkyle.herokuapp.com/
 
 ## Usage
 
-Use as you please, I hope to make updates soon!
+create and review posts, create a account and comment on posts
 ## Credits  
 
-Meg Meyers (tutor), ASK BCS
+ASK BCS, Meg Meyers (tutor)
 
 
 ## Features  
 
-NA
+Create, update, edit and delete posts and comments
 
 
 ## Contributing  
 
-NA
+
 
 
 ## Tests
 
-NA
+
 
 ## Questions
 find me on github at [KyleOetjens](https://github.com/KyleOetjens)  

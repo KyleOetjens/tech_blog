@@ -26,14 +26,14 @@ const newCommentHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/projects/${id}`, {
+      const response = await fetch(`/api/comments/${id}`, {
         method: 'DELETE',
       });
   
       if (response.ok) {
         document.location.replace('/profile');
       } else {
-        alert('Failed to delete project');
+        alert('Failed to delete comment');
       }
     }
   };
@@ -41,8 +41,7 @@ const newCommentHandler = async (event) => {
   document
     .querySelector('.new-comment-form')
     .addEventListener('submit', newCommentHandler);
-  
-  // document
-  //   .querySelector('.project-list')
-  //   .addEventListener('click', delButtonHandler);
+   document
+.getElementById('.comment-delete-btn')
+.addEventListener(`click`, delButtonHandler);
   
