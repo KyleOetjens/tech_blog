@@ -42,6 +42,6 @@ const newCommentHandler = async (event) => {
     .querySelector('.new-comment-form')
     .addEventListener('submit', newCommentHandler);
    document
-.getElementById('.comment-delete-btn')
+.querySelectorAll('.comment-delete-btn')
 .addEventListener(`click`, delButtonHandler);
   
